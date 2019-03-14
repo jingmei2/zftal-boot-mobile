@@ -26,7 +26,7 @@ import java.util.List;
  *
  * @author calvin
  */
-public class ReflectionUtils {
+public class  ReflectionUtils {
 
 	protected static Log logger = LogFactory.getLog(ReflectionUtils.class);
 

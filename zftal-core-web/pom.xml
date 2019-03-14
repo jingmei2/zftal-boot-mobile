@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zfsoft.zftal</groupId>
-    <artifactId>zftal-core-web</artifactId>
+    <artifactId>zftal-boot-core-web</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>zftal-core-web</name>

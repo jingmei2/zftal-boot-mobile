@@ -16,7 +16,10 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
     </properties>
 
     <dependencies>
@@ -133,12 +136,18 @@
             <version>1.0.2</version>
         </dependency>
 
-        <!-- oracle -->
-        <!--<dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
-            <version>10.2.0.4.0</version>
-        </dependency>-->
+        <!-- zftal -->
+        <dependency>
+            <groupId>com.zfsoft.zftal</groupId>
+            <artifactId>zftal-boot-core-util</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+            <scope>compile</scope>
+        </dependency>
 
 
     </dependencies>
@@ -164,10 +173,12 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<configuration>
-                    <executable>true</executable>
-                    <mainClass>com.zfsoft.boot.zhjx.ZhjxApplication</mainClass>
-                </configuration>-->
+                <!--解压编译的jar文件发现该jar本打包成了spring-boot的可执行jar。
+                spring-boot工程打包编译时，会生成两种jar包，一种是普通的jar，另一种是可执行jar。
+                默认情况下，这两种jar的名称相同，在不做配置的情况下，普通的jar先生成，可执行jar后生成，所以可执行jar会覆盖普通的jar-->
+                <configuration>
+                    <classifier>exec</classifier>
+                </configuration>
             </plugin>
             <!-- 第一步：生成可执行的启动脚本 -->
             <plugin>

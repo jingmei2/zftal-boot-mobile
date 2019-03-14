@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zfsoft.zftal</groupId>
-    <artifactId>zftal-core-common</artifactId>
+    <artifactId>zftal-boot-core-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>zftal-core-common</name>
