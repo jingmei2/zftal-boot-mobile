@@ -133,12 +133,12 @@
             <version>1.0.2</version>
         </dependency>
 
-        <!-- oracle -->
-        <!--<dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc14</artifactId>
-            <version>10.2.0.4.0</version>
-        </dependency>-->
+        <!-- zftal -->
+        <dependency>
+            <groupId>com.zfsoft.zftal</groupId>
+            <artifactId>zftal-boot-core-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
 
     </dependencies>
