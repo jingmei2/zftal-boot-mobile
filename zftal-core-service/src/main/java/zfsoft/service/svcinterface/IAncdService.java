@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import common.log.User;
+import zfsoft.dao.entities.AncdModel;
+
 import java.util.List;
 
-import com.zfsoft.common.log.User;
-import com.zfsoft.dao.entities.AncdModel;
 
 public interface IAncdService {
 

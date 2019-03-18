@@ -14,6 +14,6 @@ import zfsoft.dao.query.BaseDao;
 * 修改备注：
 *
  */
-public interface IXtszDao extends BaseDao<XtszModel> {
+public interface IXtszDao extends BaseDao<XtszModel>, common.dao.BaseDao<XtszModel> {
 
 }

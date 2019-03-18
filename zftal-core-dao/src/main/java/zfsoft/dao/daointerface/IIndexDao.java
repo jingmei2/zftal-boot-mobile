@@ -1,7 +1,7 @@
 package zfsoft.dao.daointerface;
 
+import common.log.User;
 import zfsoft.dao.entities.IndexModel;
-import zfsoft.dao.entities.User;
 import zfsoft.dao.query.BaseDao;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import java.util.Map;
 * @version
 *
  */
-public interface IIndexDao extends BaseDao<IndexModel> {
+public interface IIndexDao extends BaseDao<IndexModel>, common.dao.BaseDao<IndexModel> {
 	/**
 	 * 查询老师三级功能代码，当前一级菜单下的三级菜单    三级菜单   根据jsxx  仅限老师用户
 	 * @return

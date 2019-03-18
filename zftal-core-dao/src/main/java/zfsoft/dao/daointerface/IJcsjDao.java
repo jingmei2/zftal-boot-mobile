@@ -19,7 +19,7 @@ import java.util.List;
 * @version
 *
  */
-public interface IJcsjDao extends BaseDao<JcsjModel> {
+public interface IJcsjDao extends BaseDao<JcsjModel>, common.dao.BaseDao<JcsjModel> {
 
 	/**
 	 *

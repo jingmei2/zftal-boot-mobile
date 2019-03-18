@@ -1,12 +1,12 @@
 package zfsoft.service.impl;
 
+
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.IWdyyDao;
+import zfsoft.dao.entities.WdyyModel;
+import zfsoft.service.svcinterface.IWdyyService;
+
 import java.util.List;
-
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IWdyyDao;
-import com.zfsoft.dao.entities.WdyyModel;
-import com.zfsoft.service.svcinterface.IWdyyService;
-
 
 /**
  *
@@ -19,7 +19,7 @@ import com.zfsoft.service.svcinterface.IWdyyService;
 * @version
 *
  */
-public class WdyyServiceImpl extends BaseServiceImpl<WdyyModel, IWdyyDao> implements IWdyyService  {
+public class WdyyServiceImpl extends BaseServiceImpl<WdyyModel, IWdyyDao> implements IWdyyService {
 	/**
 	 * 删除我的应用
 	 */

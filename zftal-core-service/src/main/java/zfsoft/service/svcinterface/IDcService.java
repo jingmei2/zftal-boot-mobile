@@ -1,12 +1,13 @@
 package zfsoft.service.svcinterface;
 
+import common.log.User;
+import common.service.BaseService;
+import zfsoft.dao.entities.DczdpzModel;
+
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.DczdpzModel;
 
 /**
  *
@@ -21,7 +22,7 @@ import com.zfsoft.dao.entities.DczdpzModel;
 * @version
 *
  */
-public interface IDcService extends BaseService<DczdpzModel>{
+public interface IDcService extends BaseService<DczdpzModel> {
 
 	/**
 	 *

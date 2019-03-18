@@ -1,10 +1,11 @@
 package zfsoft.service.impl;
 
+import common.log.Subsystem;
+import zfsoft.dao.daointerface.SubsystemDao;
+import zfsoft.service.svcinterface.SubsystemService;
+
 import java.util.List;
 
-import com.zfsoft.common.log.Subsystem;
-import com.zfsoft.dao.daointerface.SubsystemDao;
-import com.zfsoft.service.svcinterface.SubsystemService;
 /**
  * 子系统操作service
  *
@@ -16,7 +17,7 @@ public class SubsystemServiceImpl implements SubsystemService {
 	private SubsystemDao subsystemDao;
 
 	@Override
-	public List<Subsystem> queryAllEnabledAndDefaultOrder() {
+	public List<common.log.Subsystem> queryAllEnabledAndDefaultOrder() {
 		Subsystem query=new Subsystem();
 		query.setEnabled("1");
 		query.setOrderStr("ORDER BY SEQ");

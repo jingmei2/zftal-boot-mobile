@@ -24,7 +24,7 @@ import java.util.Map;
 * @version
 *
  */
-public interface IJsglDao extends BaseDao<JsglModel> {
+public interface IJsglDao extends BaseDao<JsglModel>, common.dao.BaseDao<JsglModel> {
 		/**
 		 *
 		* 方法描述: 查询岗位级别代码

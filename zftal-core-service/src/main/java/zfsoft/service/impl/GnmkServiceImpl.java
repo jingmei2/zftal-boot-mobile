@@ -1,11 +1,11 @@
 package zfsoft.service.impl;
 
-import java.util.List;
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.IGnmkDao;
+import zfsoft.dao.entities.GnmkModel;
+import zfsoft.service.svcinterface.IGnmkService;
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IGnmkDao;
-import com.zfsoft.dao.entities.GnmkModel;
-import com.zfsoft.service.svcinterface.IGnmkService;
+import java.util.List;
 
 
 /**

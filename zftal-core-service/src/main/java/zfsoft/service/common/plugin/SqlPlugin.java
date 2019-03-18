@@ -13,8 +13,11 @@ import java.util.Properties;
 import javax.servlet.http.HttpSession;
 import javax.xml.bind.PropertyException;
 
+import common.factory.ServiceFactory;
+import common.factory.SessionFactory;
+import common.log.Subsystem;
+import common.log.User;
 import org.apache.commons.lang.StringUtils;
-import org.apache.ibatis.builder.xml.dynamic.ForEachSqlNode;
 import org.apache.ibatis.executor.ErrorContext;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.executor.ExecutorException;
@@ -32,6 +35,7 @@ import org.apache.ibatis.plugin.Plugin;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.property.PropertyTokenizer;
+import org.apache.ibatis.scripting.xmltags.ForEachSqlNode;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
@@ -39,20 +43,14 @@ import org.apache.ibatis.type.TypeHandler;
 import org.apache.ibatis.type.TypeHandlerRegistry;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.zfsoft.common.factory.ServiceFactory;
-import com.zfsoft.common.factory.SessionFactory;
-import com.zfsoft.common.log.Subsystem;
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.query.QueryModel;
-import com.zfsoft.dao.entities.SjfwzModel;
-import com.zfsoft.dataprivilege.util.DataFilterUtil;
-import com.zfsoft.service.svcinterface.ISjfwzService;
-import com.zfsoft.util.base.StringUtil;
-import com.zfsoft.util.reflect.ReflectHelper;
-import com.zfsoft.utility.InterceptSrcForSubsystem;
-import com.zfsoft.utility.Value2Entity;
-
-
+import util.base.StringUtil;
+import util.reflect.ReflectHelper;
+import zfsoft.dao.entities.SjfwzModel;
+import zfsoft.dao.query.QueryModel;
+import zfsoft.dataprivilege.util.DataFilterUtil;
+import zfsoft.service.svcinterface.ISjfwzService;
+import zfsoft.utility.InterceptSrcForSubsystem;
+import zfsoft.utility.Value2Entity;
 
 
 @Intercepts({
@@ -84,7 +82,7 @@ public class SqlPlugin implements Interceptor {
 				subsystem=(Subsystem)session.get("subsystem");
 			}
 			if(subsystem!=null){
-				Value2Entity[] entities=InterceptSrcForSubsystem.getSrcList();
+				Value2Entity[] entities= InterceptSrcForSubsystem.getSrcList();
 				if(entities!=null){
 					MappedStatement mappedStatement = (MappedStatement)ivk.getArgs()[0];
 					String sqlId = mappedStatement.getId();

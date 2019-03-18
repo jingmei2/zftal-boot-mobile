@@ -13,7 +13,7 @@ import java.util.Map;
  * 创建时间：2012-6-11
  * @version
  */
-public interface IBmdmDao extends BaseDao<BmdmModel> {
+public interface IBmdmDao extends common.dao.BaseDao<BmdmModel> {
 	/**
 	 *
 	* 方法描述: 查询部门列表

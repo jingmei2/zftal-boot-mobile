@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.JcsjModel;
+
 import java.util.List;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.JcsjModel;
 
 /**
  *
@@ -18,7 +19,7 @@ import com.zfsoft.dao.entities.JcsjModel;
 * @version
 *
  */
-public interface IJcsjService extends BaseService<JcsjModel>{
+public interface IJcsjService extends BaseService<JcsjModel> {
 
 
 	/**

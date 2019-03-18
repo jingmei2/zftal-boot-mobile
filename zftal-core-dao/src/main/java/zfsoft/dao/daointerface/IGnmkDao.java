@@ -21,7 +21,7 @@ import java.util.List;
  * @version
  *
  */
-public interface IGnmkDao extends BaseDao<GnmkModel> {
+public interface IGnmkDao extends BaseDao<GnmkModel>, common.dao.BaseDao<GnmkModel> {
     /**
      * 查询操作代码
      * @param model

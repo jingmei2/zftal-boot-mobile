@@ -17,7 +17,7 @@ import java.util.List;
 * @version
 *
  */
-public interface IWdyyDao extends BaseDao<WdyyModel> {
+public interface IWdyyDao extends BaseDao<WdyyModel>, common.dao.BaseDao<WdyyModel> {
 	/**
 	 * 删除我的应用
 	 * @param model  删除条件

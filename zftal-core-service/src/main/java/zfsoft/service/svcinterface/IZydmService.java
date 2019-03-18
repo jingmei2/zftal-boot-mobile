@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import zfsoft.dao.entities.ZydmModel;
+
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.dao.entities.ZydmModel;
 
 public interface IZydmService {
 	/**

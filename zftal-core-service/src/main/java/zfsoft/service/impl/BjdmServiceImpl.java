@@ -1,7 +1,8 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.dao.daointerface.IBjdmDao;
-import com.zfsoft.service.svcinterface.IBjdmService;
+
+import zfsoft.dao.daointerface.IBjdmDao;
+import zfsoft.service.svcinterface.IBjdmService;
 
 public class BjdmServiceImpl implements IBjdmService {
 

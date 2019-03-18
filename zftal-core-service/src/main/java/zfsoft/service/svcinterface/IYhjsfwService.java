@@ -1,11 +1,12 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.YhjsfwModel;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.YhjsfwModel;
 
 /**
  *
@@ -14,7 +15,7 @@ import com.zfsoft.dao.entities.YhjsfwModel;
  * 创建人：caozf
  * 创建时间：2012-7-12
  */
-public interface IYhjsfwService extends BaseService<YhjsfwModel>{
+public interface IYhjsfwService extends BaseService<YhjsfwModel> {
 
 	/**
 	 * 测试拦截学生家庭表

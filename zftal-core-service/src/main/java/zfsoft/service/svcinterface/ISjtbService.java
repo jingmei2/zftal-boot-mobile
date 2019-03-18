@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.YhglModel;
+
 import java.util.Map;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.YhglModel;
 
 
 /**

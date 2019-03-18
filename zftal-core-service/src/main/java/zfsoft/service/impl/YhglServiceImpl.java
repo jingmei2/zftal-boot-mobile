@@ -7,24 +7,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import common.factory.SessionFactory;
+import common.service.BaseServiceImpl;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.Assert;
+import util.encrypt.Encrypt;
+import zfsoft.dao.daointerface.IYhglDao;
+import zfsoft.dao.daointerface.IYhjsfwDao;
+import zfsoft.dao.entities.*;
+import common.log.User;
+import zfsoft.dao.page.PageList;
+import zfsoft.dao.page.Paginator;
+import zfsoft.service.svcinterface.IYhglService;
 
-import com.zfsoft.common.factory.SessionFactory;
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IYhglDao;
-import com.zfsoft.dao.daointerface.IYhjsfwDao;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.dao.entities.UserSubsystemLastRole;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.entities.YhglModelNew;
-import com.zfsoft.dao.entities.YhjsfwModel;
-import com.zfsoft.dao.entities.YhxxbModel;
-import com.zfsoft.dao.page.PageList;
-import com.zfsoft.dao.page.Paginator;
-import com.zfsoft.service.svcinterface.IYhglService;
-import com.zfsoft.util.encrypt.Encrypt;
 
 /**
  *
@@ -103,7 +98,7 @@ public class YhglServiceImpl extends BaseServiceImpl<YhglModel, IYhglDao>
 
 		List<YhglModel> list = new ArrayList<YhglModel>();
 
-		User user=SessionFactory.getUser();
+		User user= SessionFactory.getUser();
 		JsglModel jsglModel=new JsglModel();
 		jsglModel.setIsAdmin(user.isAdmin());
 		jsglModel.setJscjr(user.getYhm());

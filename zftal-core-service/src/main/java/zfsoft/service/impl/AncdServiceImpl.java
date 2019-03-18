@@ -1,11 +1,11 @@
 package zfsoft.service.impl;
 
-import java.util.List;
+import common.log.User;
+import zfsoft.dao.daointerface.IAncdDao;
+import zfsoft.dao.entities.AncdModel;
+import zfsoft.service.svcinterface.IAncdService;
 
-import com.zfsoft.common.log.User;
-import com.zfsoft.dao.daointerface.IAncdDao;
-import com.zfsoft.dao.entities.AncdModel;
-import com.zfsoft.service.svcinterface.IAncdService;
+import java.util.List;
 
 
 /**
@@ -32,7 +32,7 @@ public class AncdServiceImpl implements IAncdService {
 		this.ancdDao = ancdDao;
 	}
 
-	public List<AncdModel> cxAncd(AncdModel ancdModel,User user){
+	public List<AncdModel> cxAncd(AncdModel ancdModel, User user){
 		List<AncdModel> list=null;
 		if(user!=null && "student".equals(user.getYhlx())){
 			list=this.ancdDao.cxAncdXs(ancdModel);

@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.XtszModel;
+
 import java.util.List;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.XtszModel;
 
 
 
@@ -17,7 +18,7 @@ import com.zfsoft.dao.entities.XtszModel;
 * 修改备注：
 *
  */
-public interface IXtszService extends BaseService<XtszModel>{
+public interface IXtszService extends BaseService<XtszModel> {
 
 
 	/**

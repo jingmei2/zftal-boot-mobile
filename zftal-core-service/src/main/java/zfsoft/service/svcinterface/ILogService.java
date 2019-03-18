@@ -1,6 +1,7 @@
 package zfsoft.service.svcinterface;
 
-import com.zfsoft.dao.entities.OperateLogModel;
+
+import zfsoft.dao.entities.OperateLogModel;
 
 public interface ILogService {
 

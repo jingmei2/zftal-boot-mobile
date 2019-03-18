@@ -1,15 +1,16 @@
 package zfsoft.service.svcinterface;
 
 
+import common.service.BaseService;
+import zfsoft.dao.entities.JsglModel;
+import zfsoft.dao.entities.NewJsglModel;
+import zfsoft.dao.entities.YhglModel;
+import zfsoft.dao.page.PageList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.dao.entities.NewJsglModel;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.page.PageList;
 
 
 
@@ -28,7 +29,7 @@ import com.zfsoft.dao.page.PageList;
 * @version
 *
  */
-public interface IJsglService extends BaseService<JsglModel>{
+public interface IJsglService extends BaseService<JsglModel> {
 
 	public List<NewJsglModel> getAllJsglist(NewJsglModel model);
 

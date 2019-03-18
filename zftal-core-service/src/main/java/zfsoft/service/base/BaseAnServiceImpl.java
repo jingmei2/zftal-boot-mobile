@@ -1,8 +1,9 @@
 package zfsoft.service.base;
 
+import zfsoft.dao.annotation.BaseAnDao;
+
 import java.util.List;
 
-import com.zfsoft.dao.annotation.BaseAnDao;
 
 public abstract class BaseAnServiceImpl<T> implements BaseAnService<T> {
 

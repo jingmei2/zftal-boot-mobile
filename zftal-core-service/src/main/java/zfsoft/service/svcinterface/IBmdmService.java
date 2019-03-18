@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import zfsoft.dao.entities.BmdmModel;
+
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.dao.entities.BmdmModel;
 
 
 public interface IBmdmService{

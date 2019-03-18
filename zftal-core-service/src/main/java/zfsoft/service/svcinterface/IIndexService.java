@@ -1,12 +1,13 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.IndexModel;
+import zfsoft.dao.log.User;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.IndexModel;
 
 public interface IIndexService extends BaseService<IndexModel> {
 
@@ -42,10 +43,10 @@ public interface IIndexService extends BaseService<IndexModel> {
 
 	/**
 	 * 切换用户
-	 * @param user 需要切换的用户信息
+	 * @param indexModel 需要切换的用户信息
 	 * @return
 	 */
-	public User qhYh(IndexModel indexModel) ;
+	public common.log.User qhYh(IndexModel indexModel) ;
 
 	 /** 用户附属
 	 * @param user

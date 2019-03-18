@@ -1,9 +1,8 @@
 package zfsoft.service.svcinterface;
 
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.XwglModel;
-
+import common.service.BaseService;
+import zfsoft.dao.entities.XwglModel;
 
 /**
  *
@@ -15,7 +14,7 @@ import com.zfsoft.dao.entities.XwglModel;
 * 修改备注：
 *
  */
-public interface IXwglService extends BaseService<XwglModel>{
+public interface IXwglService extends BaseService<XwglModel> {
 
 
 /*	*//**

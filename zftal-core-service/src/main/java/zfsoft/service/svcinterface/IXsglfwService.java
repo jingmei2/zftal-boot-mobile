@@ -1,7 +1,8 @@
 package zfsoft.service.svcinterface;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.XsglfwModel;
+
+import common.service.BaseService;
+import zfsoft.dao.entities.XsglfwModel;
 
 /**
  *
@@ -13,5 +14,5 @@ import com.zfsoft.dao.entities.XsglfwModel;
 * 修改备注：
 *
  */
-public interface IXsglfwService extends BaseService<XsglfwModel>{
+public interface IXsglfwService extends BaseService<XsglfwModel> {
 }

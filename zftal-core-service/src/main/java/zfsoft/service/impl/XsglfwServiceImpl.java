@@ -1,9 +1,10 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IXsglfwDao;
-import com.zfsoft.dao.entities.XsglfwModel;
-import com.zfsoft.service.svcinterface.IXsglfwService;
+
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.IXsglfwDao;
+import zfsoft.dao.entities.XsglfwModel;
+import zfsoft.service.svcinterface.IXsglfwService;
 
 /**
  *
@@ -15,7 +16,7 @@ import com.zfsoft.service.svcinterface.IXsglfwService;
 * @version
 *
  */
-public class XsglfwServiceImpl extends BaseServiceImpl<XsglfwModel,IXsglfwDao> implements IXsglfwService {
+public class XsglfwServiceImpl extends BaseServiceImpl<XsglfwModel, IXsglfwDao> implements IXsglfwService {
 
 	//增加学生管理范围信息
 	public void insertXsglfw(XsglfwModel model) throws Exception{

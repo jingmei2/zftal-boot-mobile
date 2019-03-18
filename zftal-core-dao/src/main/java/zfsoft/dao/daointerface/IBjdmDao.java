@@ -12,6 +12,6 @@ import zfsoft.dao.query.BaseDao;
  * @version
  *
  */
-public interface IBjdmDao extends BaseDao<BjdmModel> {
+public interface IBjdmDao extends common.dao.BaseDao<BjdmModel> {
 
 }

@@ -12,7 +12,7 @@ import zfsoft.dao.query.BaseDao;
  * @version
  *
  */
-public interface INjdmDao extends BaseDao<NjdmModel> {
+public interface INjdmDao extends common.dao.BaseDao<NjdmModel> {
 
 
 

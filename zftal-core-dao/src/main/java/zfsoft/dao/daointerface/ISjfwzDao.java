@@ -14,7 +14,7 @@ import java.util.Map;
  * 创建人：caozf
  * 创建时间：2012-7-10
  */
-public interface ISjfwzDao extends BaseDao<SjfwzModel> {
+public interface ISjfwzDao extends BaseDao<SjfwzModel>, common.dao.BaseDao<SjfwzModel> {
 
 	/**
 	 * 根据用户角色查询数据范围组

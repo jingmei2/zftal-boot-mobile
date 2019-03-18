@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
-import java.util.List;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.WdyyModel;
+import common.service.BaseService;
+import zfsoft.dao.entities.WdyyModel;
+
+import java.util.List;
 
 /**
  *

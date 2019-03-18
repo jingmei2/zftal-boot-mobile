@@ -1,16 +1,13 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.*;
+import zfsoft.dao.page.PageList;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.dao.entities.UserSubsystemLastRole;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.entities.YhglModelNew;
-import com.zfsoft.dao.entities.YhxxbModel;
-import com.zfsoft.dao.page.PageList;
 
 /**
  *

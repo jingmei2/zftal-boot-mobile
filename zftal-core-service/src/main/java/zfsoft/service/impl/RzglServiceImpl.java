@@ -1,10 +1,10 @@
 package zfsoft.service.impl;
 
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IRzglDao;
-import com.zfsoft.dao.entities.RzglModel;
-import com.zfsoft.service.svcinterface.IRzglService;
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.IRzglDao;
+import zfsoft.dao.entities.RzglModel;
+import zfsoft.service.svcinterface.IRzglService;
 
 /**
  *
@@ -16,7 +16,7 @@ import com.zfsoft.service.svcinterface.IRzglService;
 * 修改备注：
 *
  */
-public class RzglServiceImpl extends BaseServiceImpl<RzglModel,IRzglDao> implements IRzglService {
+public class RzglServiceImpl extends BaseServiceImpl<RzglModel, IRzglDao> implements IRzglService {
 
 
 	/*private RzglDao dao;

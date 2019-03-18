@@ -1,6 +1,7 @@
 package zfsoft.dao.daointerface;
 
-import zfsoft.dao.log.Subsystem;
+
+import common.log.Subsystem;
 
 import java.util.List;
 

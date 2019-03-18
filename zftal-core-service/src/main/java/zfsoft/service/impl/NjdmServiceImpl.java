@@ -1,7 +1,8 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.dao.daointerface.INjdmDao;
-import com.zfsoft.service.svcinterface.INjdmService;
+
+import zfsoft.dao.daointerface.INjdmDao;
+import zfsoft.service.svcinterface.INjdmService;
 
 public class NjdmServiceImpl implements INjdmService {
 

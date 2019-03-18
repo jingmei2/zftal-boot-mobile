@@ -22,7 +22,7 @@ import zfsoft.dao.query.BaseDao;
 * @version
 *
  */
-public interface IYhglDao extends BaseDao<YhglModel> {
+public interface IYhglDao extends BaseDao<YhglModel>, common.dao.BaseDao<YhglModel> {
 
 	/**
 	 *

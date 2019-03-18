@@ -15,7 +15,7 @@ import java.util.Map;
  * 创建人：caozf
  * 创建时间：2012-7-10
  */
-public interface IYhjsfwDao extends BaseDao<YhjsfwModel> {
+public interface IYhjsfwDao extends BaseDao<YhjsfwModel>, common.dao.BaseDao<YhjsfwModel> {
 
 	/**
 	 * 测试拦截学生家庭表

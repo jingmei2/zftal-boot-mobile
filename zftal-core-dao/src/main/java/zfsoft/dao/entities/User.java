@@ -3,6 +3,11 @@ package zfsoft.dao.entities;
 
 import zfsoft.dao.query.BaseQuery;
 
+
+/**
+ * @author Administrator
+ * 比较简单的user实体类
+ */
 public class User extends BaseQuery {
 	private static final long serialVersionUID = 168148605371820079L;
     private String name;//姓名

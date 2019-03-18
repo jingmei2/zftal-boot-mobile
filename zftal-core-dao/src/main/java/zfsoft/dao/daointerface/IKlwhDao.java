@@ -17,7 +17,7 @@ import java.util.Map;
 * @version
 *
  */
-public interface IKlwhDao extends BaseDao<XsmmModel> {
+public interface IKlwhDao extends BaseDao<XsmmModel>, common.dao.BaseDao<XsmmModel> {
 
 	/**
 	 *

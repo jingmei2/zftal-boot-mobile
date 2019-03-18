@@ -13,7 +13,7 @@ import java.util.List;
  * 创建人：caozf
  * 创建时间：2012-7-10
  */
-public interface ISjfwdxDao extends BaseDao<SjfwdxModel> {
+public interface ISjfwdxDao extends BaseDao<SjfwdxModel>, common.dao.BaseDao<SjfwdxModel> {
 
 	/**
 	 * 查询数据范围对象列表

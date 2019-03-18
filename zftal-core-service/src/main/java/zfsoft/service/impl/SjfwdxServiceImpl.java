@@ -1,11 +1,12 @@
 package zfsoft.service.impl;
 
-import java.util.List;
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.ISjfwdxDao;
-import com.zfsoft.dao.entities.SjfwdxModel;
-import com.zfsoft.service.svcinterface.ISjfwdxService;
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.ISjfwdxDao;
+import zfsoft.dao.entities.SjfwdxModel;
+import zfsoft.service.svcinterface.ISjfwdxService;
+
+import java.util.List;
 
 /**
  *

@@ -1,7 +1,7 @@
 package common.factory;
 
+import common.log.User;
 import org.apache.struts2.ServletActionContext;
-import zfsoft.dao.log.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

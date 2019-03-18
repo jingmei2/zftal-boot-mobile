@@ -19,7 +19,7 @@ import java.util.Map;
  * @version
  *
  */
-public interface ISjtbDao extends BaseDao<YhglModel> {
+public interface ISjtbDao extends BaseDao<YhglModel>, common.dao.BaseDao<YhglModel> {
     /**
      * 数据同步用户表
      * @param yhglModel

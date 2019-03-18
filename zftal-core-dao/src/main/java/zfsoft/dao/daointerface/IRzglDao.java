@@ -14,7 +14,7 @@ import zfsoft.dao.query.BaseDao;
 * 修改备注：
 *
  */
-public interface IRzglDao extends BaseDao<RzglModel> {
+public interface IRzglDao extends BaseDao<RzglModel>, common.dao.BaseDao<RzglModel> {
 
 
 }

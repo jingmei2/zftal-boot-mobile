@@ -1,23 +1,23 @@
 package zfsoft.dataprivilege.service.impl;
 
+import zfsoft.dataprivilege.dao.IDataPrivilegeDao;
+import zfsoft.dataprivilege.dto.AbstractFilter;
+import zfsoft.dataprivilege.entity.DataPrivilege;
+import zfsoft.dataprivilege.filter.IDealFilter;
+import zfsoft.dataprivilege.service.IDataPrivilegeService;
+import zfsoft.dataprivilege.util.ResourceUtil;
+import zfsoft.dataprivilege.xentity.Context;
+
 import java.util.List;
 
-import com.zfsoft.dataprivilege.dao.IDataPrivilegeDao;
-import com.zfsoft.dataprivilege.dto.AbstractFilter;
-import com.zfsoft.dataprivilege.entity.DataPrivilege;
-import com.zfsoft.dataprivilege.filter.IDealFilter;
-import com.zfsoft.dataprivilege.service.IDataPrivilegeService;
-import com.zfsoft.dataprivilege.util.ResourceUtil;
-import com.zfsoft.dataprivilege.xentity.Context;
 
-public class DataPrivilegeServiceImpl implements IDataPrivilegeService{
+public abstract class DataPrivilegeServiceImpl implements IDataPrivilegeService {
 	private IDataPrivilegeDao dataPrivilegeDao = null;
 
 	public void setDataPrivilegeDao(IDataPrivilegeDao dataPrivilegeDao) {
 		this.dataPrivilegeDao = dataPrivilegeDao;
 	}
 
-	@Override
 	public DataPrivilege getDataPrivilegeById(DataPrivilege query) {
 		List<DataPrivilege> dataPrivileges=dataPrivilegeDao.findByQuery(query);
 		if(dataPrivileges!=null&&dataPrivileges.size()>0){
@@ -26,7 +26,6 @@ public class DataPrivilegeServiceImpl implements IDataPrivilegeService{
 		return null;
 	}
 
-	@Override
 	public AbstractFilter getValueObject(AbstractFilter filter) {
 		DataPrivilege query=new DataPrivilege();
 		query.setFilterId(filter.getFilterId());
@@ -36,7 +35,7 @@ public class DataPrivilegeServiceImpl implements IDataPrivilegeService{
 		if(dataPrivilege==null){
 			return filter;
 		}
-		Context context=ResourceUtil.getContextById(dataPrivilege.getFilterId());
+		Context context= ResourceUtil.getContextById(dataPrivilege.getFilterId());
 
 		try {
 			IDealFilter deal=(IDealFilter)Class.forName(context.getDealclass()).newInstance();
@@ -52,7 +51,6 @@ public class DataPrivilegeServiceImpl implements IDataPrivilegeService{
 		return null;
 	}
 
-	@Override
 	public void saveValue(AbstractFilter filter) {
 		if(filter==null){
 			deleteDataPrivilege(filter);

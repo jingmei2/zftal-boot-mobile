@@ -1,12 +1,13 @@
 package zfsoft.service.common;
 
+import zfsoft.dao.entities.BjdmModel;
+import zfsoft.dao.entities.BmdmModel;
+import zfsoft.dao.entities.NjdmModel;
+import zfsoft.dao.entities.ZydmModel;
+
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.dao.entities.BjdmModel;
-import com.zfsoft.dao.entities.BmdmModel;
-import com.zfsoft.dao.entities.NjdmModel;
-import com.zfsoft.dao.entities.ZydmModel;
 
 /**
 *

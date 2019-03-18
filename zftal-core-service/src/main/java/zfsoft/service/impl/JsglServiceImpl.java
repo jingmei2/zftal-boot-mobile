@@ -2,25 +2,26 @@ package zfsoft.service.impl;
 
 
 
+import common.factory.SessionFactory;
+import common.service.BaseServiceImpl;
+import util.base.MessageUtil;
+import util.base.StringUtil;
+import zfsoft.dao.daointerface.IJsglDao;
+import zfsoft.dao.daointerface.IYhglDao;
+import zfsoft.dao.daointerface.IYhjsfwDao;
+import zfsoft.dao.entities.JsglModel;
+import zfsoft.dao.entities.NewJsglModel;
+import zfsoft.dao.entities.YhglModel;
+import zfsoft.dao.entities.YhjsfwModel;
+import zfsoft.dao.page.PageList;
+import zfsoft.dao.page.Paginator;
+import zfsoft.service.svcinterface.IJsglService;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.factory.SessionFactory;
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IJsglDao;
-import com.zfsoft.dao.daointerface.IYhglDao;
-import com.zfsoft.dao.daointerface.IYhjsfwDao;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.dao.entities.NewJsglModel;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.entities.YhjsfwModel;
-import com.zfsoft.dao.page.PageList;
-import com.zfsoft.dao.page.Paginator;
-import com.zfsoft.service.svcinterface.IJsglService;
-import com.zfsoft.util.base.MessageUtil;
-import com.zfsoft.util.base.StringUtil;
 
 
 
@@ -81,7 +82,7 @@ public class JsglServiceImpl extends BaseServiceImpl<JsglModel, IJsglDao>
 			}
 			errorRow = pkValues.length-successRow;
 			if(errorRow == 0){
-				mess=MessageUtil.getText("I99005");
+				mess= MessageUtil.getText("I99005");
 			}else{
 				mess=MessageUtil.getText("I99009");
 			}

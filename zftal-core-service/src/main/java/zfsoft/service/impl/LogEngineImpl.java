@@ -1,12 +1,12 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.common.factory.ServiceFactory;
-import com.zfsoft.common.factory.SessionFactory;
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseLog;
-import com.zfsoft.dao.entities.OperateLogModel;
-import com.zfsoft.service.svcinterface.ILogService;
 
+import common.factory.ServiceFactory;
+import common.service.BaseLog;
+import zfsoft.dao.entities.OperateLogModel;
+import zfsoft.dao.factory.SessionFactory;
+import zfsoft.dao.log.User;
+import zfsoft.service.svcinterface.ILogService;
 
 /**
 *
@@ -17,7 +17,7 @@ import com.zfsoft.service.svcinterface.ILogService;
 * 修改备注： modify by caozf
 *
 */
-public class LogEngineImpl extends BaseLog{
+public class LogEngineImpl extends BaseLog {
 
 	private static final transient org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(LogEngineImpl.class);
 
@@ -65,7 +65,7 @@ public class LogEngineImpl extends BaseLog{
 	 * @param czms 操作描述
 	 */
 	public void log(User user, String ywmc, String mkmc, String czlx,
-			String czms) {
+					String czms) {
 		try {
 			OperateLogModel model = new OperateLogModel();
 			model.setCzlx(czlx);

@@ -1,9 +1,10 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.dao.daointerface.IYhglDao;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.service.svcinterface.ITestService;
+
+import common.service.BaseServiceImpl;
+import zfsoft.dao.daointerface.IYhglDao;
+import zfsoft.dao.entities.YhglModel;
+import zfsoft.service.svcinterface.ITestService;
 
 /**
  *

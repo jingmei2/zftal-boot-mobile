@@ -1,15 +1,16 @@
 package zfsoft.service.impl;
 
+import common.service.BaseServiceImpl;
+import util.base.StringUtil;
+import zfsoft.dao.daointerface.IXwglDao;
+import zfsoft.dao.entities.XwglModel;
+import zfsoft.service.svcinterface.IXwglService;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.util.base.StringUtil;
-import com.zfsoft.dao.daointerface.IXwglDao;
-import com.zfsoft.dao.entities.XwglModel;
-import com.zfsoft.service.svcinterface.IXwglService;
 
 /**
  *
@@ -21,7 +22,7 @@ import com.zfsoft.service.svcinterface.IXwglService;
 * 修改备注：
 *
  */
-public class XwglServiceImpl extends BaseServiceImpl<XwglModel,IXwglDao> implements IXwglService {
+public class XwglServiceImpl extends BaseServiceImpl<XwglModel, IXwglDao> implements IXwglService {
 
 
 
@@ -92,6 +93,7 @@ public class XwglServiceImpl extends BaseServiceImpl<XwglModel,IXwglDao> impleme
 			param.put("list", list);
 			param.put("sffb", 2);
 			int result = dao.batchUpdate(param);
+
 			return result > 0 ? true : false;
 		}
 

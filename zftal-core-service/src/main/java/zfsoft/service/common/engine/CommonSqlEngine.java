@@ -1,13 +1,14 @@
 package zfsoft.service.common.engine;
 
-import java.util.List;
 
-import com.zfsoft.common.factory.ServiceFactory;
-import com.zfsoft.dao.entities.BjdmModel;
-import com.zfsoft.dao.entities.BmdmModel;
-import com.zfsoft.dao.entities.NjdmModel;
-import com.zfsoft.dao.entities.ZydmModel;
-import com.zfsoft.service.common.ICommonSqlService;
+import common.factory.ServiceFactory;
+import zfsoft.dao.entities.BjdmModel;
+import zfsoft.dao.entities.BmdmModel;
+import zfsoft.dao.entities.NjdmModel;
+import zfsoft.dao.entities.ZydmModel;
+import zfsoft.service.common.ICommonSqlService;
+
+import java.util.List;
 
 /**
  *

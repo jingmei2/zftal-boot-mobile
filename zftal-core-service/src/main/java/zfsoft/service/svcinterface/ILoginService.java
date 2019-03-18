@@ -1,19 +1,20 @@
 package zfsoft.service.svcinterface;
 
+import common.log.User;
+import common.service.BaseService;
+import zfsoft.dao.entities.LoginModel;
+import zfsoft.dao.entities.LoginRecordModel;
+import zfsoft.dao.entities.YhglModel;
+import zfsoft.dao.entities.userStatictisEntity;
+import zfsoft.dao.page.PageList;
+import zfsoft.dao.query.LoginRecordModelQuery;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.LoginModel;
-import com.zfsoft.dao.entities.LoginRecordModel;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.entities.userStatictisEntity;
-import com.zfsoft.dao.page.PageList;
-import com.zfsoft.dao.query.LoginRecordModelQuery;
 
 /**
  * 该类覆盖了zftal-service中的com.zfsoft.service.svcinterface.ILoginService类增加了单点登录的方法
@@ -28,7 +29,7 @@ import com.zfsoft.dao.query.LoginRecordModelQuery;
  * @version
  *
  */
-public interface ILoginService extends BaseService<LoginModel>{
+public interface ILoginService extends BaseService<LoginModel> {
 
 	//app端进入app引导页调用此接口做安装统计
 	public void installsCount();
@@ -44,7 +45,7 @@ public interface ILoginService extends BaseService<LoginModel>{
 	public String getStrKey(String apptoken);
 
 	//验证用户登录返回提示信息
-	public User cxYhxx(LoginModel model) ;
+	public common.log.User cxYhxx(LoginModel model) ;
 
 	/**
 	 * 验证用户单点登录，该方法不做密码验证
@@ -70,10 +71,9 @@ public interface ILoginService extends BaseService<LoginModel>{
 
 	/**
 	 * 根据用户名查询用户信息
-	 * @param userId
 	 * @return
 	 */
-	public User getInfoByZgh(LoginModel model);
+	public common.log.User getInfoByZgh(LoginModel model);
 
     public int addLoginRecord(Map<String, Object> params);
 

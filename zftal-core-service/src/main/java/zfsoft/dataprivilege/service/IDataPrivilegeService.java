@@ -1,9 +1,10 @@
 package zfsoft.dataprivilege.service;
 
-import java.util.List;
 
-import com.zfsoft.dataprivilege.dto.AbstractFilter;
-import com.zfsoft.dataprivilege.entity.DataPrivilege;
+import zfsoft.dataprivilege.dto.AbstractFilter;
+import zfsoft.dataprivilege.entity.DataPrivilege;
+
+import java.util.List;
 
 /**
  * 数据范围服务

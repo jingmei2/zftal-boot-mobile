@@ -24,7 +24,7 @@ import java.util.Map;
 * @version
 *
  */
-public interface ILoginDao extends BaseDao<LoginModel> {
+public interface ILoginDao extends BaseDao<LoginModel>, common.dao.BaseDao<LoginModel> {
 
 	/**
 	 *

@@ -1,9 +1,10 @@
 package zfsoft.service.svcinterface;
 
+import common.service.BaseService;
+import zfsoft.dao.entities.SjfwdxModel;
+
 import java.util.List;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.SjfwdxModel;
 
 /**
  *
@@ -12,7 +13,7 @@ import com.zfsoft.dao.entities.SjfwdxModel;
  * 创建人：caozf
  * 创建时间：2012-7-12
  */
-public interface ISjfwdxService extends BaseService<SjfwdxModel>{
+public interface ISjfwdxService extends BaseService<SjfwdxModel> {
 	/**
 	 * 查询数据范围对象列表
 	 * @param List<SjfwdxModel>

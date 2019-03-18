@@ -9,26 +9,21 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import common.log.Role;
+import common.service.BaseServiceImpl;
+import common.system.SubSystemHolder;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import util.encrypt.Encrypt;
+import zfsoft.dao.daointerface.IJsglDao;
+import zfsoft.dao.daointerface.ILoginDao;
+import zfsoft.dao.daointerface.IYhglDao;
+import zfsoft.dao.entities.*;
+import zfsoft.dao.page.PageList;
+import zfsoft.dao.page.Paginator;
+import zfsoft.dao.query.LoginRecordModelQuery;
+import zfsoft.service.svcinterface.ILoginService;
 
-import com.zfsoft.common.log.Role;
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.common.system.SubSystemHolder;
-import com.zfsoft.dao.daointerface.IJsglDao;
-import com.zfsoft.dao.daointerface.ILoginDao;
-import com.zfsoft.dao.daointerface.IYhglDao;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.dao.entities.LoginModel;
-import com.zfsoft.dao.entities.LoginRecordModel;
-import com.zfsoft.dao.entities.YhglModel;
-import com.zfsoft.dao.entities.userStatictisEntity;
-import com.zfsoft.dao.page.PageList;
-import com.zfsoft.dao.page.Paginator;
-import com.zfsoft.dao.query.LoginRecordModelQuery;
-import com.zfsoft.service.svcinterface.ILoginService;
-import com.zfsoft.util.encrypt.Encrypt;
 
 /**
  *
@@ -62,16 +57,16 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 	* @throws
 	 */
 	@SuppressWarnings("static-access")
-	public User cxYhxx(LoginModel model)
+	public common.log.User cxYhxx(LoginModel model)
 			 {
 		Encrypt encrypt = new Encrypt();
 
 		//OaEncrypt encrypt = new OaEncrypt();
 		if (!StringUtils.isEmpty(model.getMm())) {
-			model.setMm(encrypt.encrypt(model.getMm()));
+			model.setMm(Encrypt.encrypt(model.getMm()));
 		}
 
-		User user = teaLogin( model );
+				 common.log.User user = teaLogin( model );
 
 //		if( user == null ) {
 //			user = stuLogin( model );
@@ -82,11 +77,11 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 
 
 	@Override
-	public User cxYhxxSso(LoginModel model,HttpSession session) {
+	public common.log.User cxYhxxSso(LoginModel model, HttpSession session) {
 		model.setMm( null );
 
 		//单点登录只有教师登录，不存在学生登录
-		User user= teaLogin( model );
+		common.log.User user= teaLogin( model );
 
 		session.setAttribute("user", user);
 
@@ -100,8 +95,8 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 	 * 初始化角色信息
 	 * @param user
 	 */
-    private void initRoles(User user,HttpSession session){
-    	String login_type=SubSystemHolder.getPropertiesValue("login_type");
+    private void initRoles(common.log.User user,HttpSession session){
+    	String login_type= SubSystemHolder.getPropertiesValue("login_type");
     	//用户拥有的角色
     	List<Role> allRoles=user.getAllRoles();
     	//1、单角色登陆
@@ -162,13 +157,13 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 	 * @param model
 	 * @return
 	 */
-	private User teaLogin( LoginModel model ) {
-		User user = null;
+	private common.log.User teaLogin( LoginModel model ) {
+		common.log.User user = null;
 		Map<String, String> map = loginDao.getTeaxx(model);
 		YhglModel ym = null;
 		if (map != null && !map.isEmpty()){
 			logger.error("map不为空");
-			user = new User();
+			user = new common.log.User();
 			if (!"1".equals((String)map.get("SFQY"))) {
 				user.setSfqy("0");
 				return user;
@@ -250,13 +245,13 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 	 * @param model
 	 * @return
 	 */
-	private User stuLogin( LoginModel model ) {
-		User user = null;
+	private common.log.User stuLogin( LoginModel model ) {
+		common.log.User user = null;
 
 		Map<String, String> map = loginDao.getStuxx(model);
 
 		if (map != null && !map.isEmpty()){
-			user = new User();
+			user = new common.log.User();
 			user.setYhm(map.get("XH"));
 			user.setXm(map.get("XM"));
 			user.setYhlx("student");
@@ -464,15 +459,14 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 
 	/**
 	 * 根据用户名查询用户信息
-	 * @param userId
 	 * @return
 	 */
-	public User getInfoByZgh(LoginModel model){
+	public common.log.User getInfoByZgh(LoginModel model){
 		Map<String,String> map = yhglDao.getInfoByZgh(model);
-		User user = null;
+		common.log.User user = null;
 		YhglModel ym = null;
 		if (map != null && !map.isEmpty()){
-			user = new User();
+			user = new common.log.User();
 			if (!"1".equals((String)map.get("SFQY"))) {
 				user.setSfqy("0");
 				return user;
@@ -558,8 +552,12 @@ public class LoginServiceImpl extends BaseServiceImpl<LoginModel, ILoginDao> imp
 		return loginDao.deleteLoginRecord(loginRecordModel);
 	}
 
-
 	@Override
+	public int bindDevice(common.log.User user) {
+		return 0;
+	}
+
+
 	public int bindDevice(User user) {
 		return yhglDao.bindDevice(user);
 	}

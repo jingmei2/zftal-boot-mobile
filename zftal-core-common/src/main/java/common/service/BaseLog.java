@@ -1,7 +1,7 @@
 package common.service;
 
 
-import common.log.User;
+import zfsoft.dao.log.User;
 
 /**
  * 用户日志抽象类<br>

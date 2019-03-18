@@ -1,5 +1,16 @@
 package zfsoft.service.impl;
 
+import common.factory.SessionFactory;
+import common.log.User;
+import common.service.BaseServiceImpl;
+import util.base.StringUtil;
+import util.collection.CollectionUtil;
+import zfsoft.dao.daointerface.IIndexDao;
+import zfsoft.dao.daointerface.IYhglDao;
+import zfsoft.dao.entities.IndexModel;
+import zfsoft.dao.entities.JsglModel;
+import zfsoft.service.svcinterface.IIndexService;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,16 +18,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.zfsoft.common.factory.SessionFactory;
-import com.zfsoft.common.log.User;
-import com.zfsoft.common.service.BaseServiceImpl;
-import com.zfsoft.util.base.StringUtil;
-import com.zfsoft.util.collection.CollectionUtil;
-import com.zfsoft.dao.daointerface.IIndexDao;
-import com.zfsoft.dao.daointerface.IYhglDao;
-import com.zfsoft.dao.entities.IndexModel;
-import com.zfsoft.dao.entities.JsglModel;
-import com.zfsoft.service.svcinterface.IIndexService;
 
 
 /**
@@ -37,8 +38,9 @@ public class IndexServiceImpl extends BaseServiceImpl<IndexModel, IIndexDao> imp
 	/**
 	 * 查询顶部 一级菜单  top
 	 */
+	@Override
 	public List<HashMap<String, String>> cxDbCd(List<String> jsxx)  {
-		User user=SessionFactory.getUser();
+		User user= SessionFactory.getUser();
 		if("student".equals(user.getYhlx())){
 			IndexModel model=new IndexModel();
 			model.setFjgndm("N");
@@ -132,6 +134,11 @@ public class IndexServiceImpl extends BaseServiceImpl<IndexModel, IIndexDao> imp
 		return rs;
 	}
 
+	@Override
+	public List<String> cxJsxxLb(zfsoft.dao.log.User user) {
+		return null;
+	}
+
 	/**
 	 *
 	 * 方法描述: 登录成功获取当前用户的对应角色  即老师
@@ -203,6 +210,11 @@ public class IndexServiceImpl extends BaseServiceImpl<IndexModel, IIndexDao> imp
 			qhUser.setJsdms(jsdms);
 		}
 		return qhUser;
+	}
+
+	@Override
+	public zfsoft.dao.log.User fsYh(zfsoft.dao.log.User user) {
+		return null;
 	}
 
 	/**

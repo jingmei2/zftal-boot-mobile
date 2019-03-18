@@ -1,8 +1,8 @@
 package zfsoft.service.impl;
 
-import com.zfsoft.dao.daointerface.ILogDao;
-import com.zfsoft.dao.entities.OperateLogModel;
-import com.zfsoft.service.svcinterface.ILogService;
+import zfsoft.dao.daointerface.ILogDao;
+import zfsoft.dao.entities.OperateLogModel;
+import zfsoft.service.svcinterface.ILogService;
 
 public class LogServiceImpl implements ILogService {
 

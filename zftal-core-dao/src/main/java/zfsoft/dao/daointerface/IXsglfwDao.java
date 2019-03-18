@@ -14,6 +14,6 @@ import zfsoft.dao.query.BaseDao;
 * 修改备注：
 *
  */
-public interface IXsglfwDao extends BaseDao<XsglfwModel> {
+public interface IXsglfwDao extends BaseDao<XsglfwModel>, common.dao.BaseDao<XsglfwModel> {
 
 }

@@ -14,7 +14,7 @@ import zfsoft.dao.query.BaseDao;
 * 修改备注：
 *
  */
-public interface IXwglDao extends BaseDao<XwglModel> {
+public interface IXwglDao extends BaseDao<XwglModel>, common.dao.BaseDao<XwglModel> {
 
 	public void getList();
 }

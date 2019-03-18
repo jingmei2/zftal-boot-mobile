@@ -23,7 +23,7 @@ import java.util.Map;
 * @version
 *
  */
-public interface IDcDao extends BaseDao<DczdpzModel> {
+public interface IDcDao extends BaseDao<DczdpzModel>, common.dao.BaseDao<DczdpzModel> {
 
 	/**
 	 *

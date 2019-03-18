@@ -1,7 +1,8 @@
 package zfsoft.service.svcinterface;
 
-import com.zfsoft.common.service.BaseService;
-import com.zfsoft.dao.entities.YhglModel;
+
+import common.service.BaseService;
+import zfsoft.dao.entities.YhglModel;
 
 /**
  *
