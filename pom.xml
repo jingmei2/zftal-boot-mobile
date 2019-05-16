@@ -16,12 +16,26 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
+
         <module>zftal-core-common</module>
         <module>zftal-core-config</module>
-        <module>zftal-core-dao</module>
-        <module>zftal-core-service</module>
         <module>zftal-core-util</module>
+        <module>zftal-core-dao</module>
+
+        <module>zftal-core-service</module>
+        <module>zftal-middleware-core</module>
+
+
+        <module>zftal-core-action</module>
         <module>zftal-core-web</module>
+
+        <module>zftal-hrm-core-common</module>
+
+        <module>zftal-workflow</module>
+        <module>zftal-hrm-core</module>
+        <module>zftal-weibo-core</module>
+
+        <module>zftal-mobile-core</module>
     </modules>
 
 </project>

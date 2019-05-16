@@ -139,12 +139,12 @@
             <artifactId>zftal-boot-core-util</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.zfsoft.zftal</groupId>
-            <artifactId>zftal-core-dao</artifactId>
+            <artifactId>zftal-boot-core-dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>commons-configuration</groupId>
             <artifactId>commons-configuration</artifactId>
