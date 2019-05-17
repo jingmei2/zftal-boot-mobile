@@ -3,9 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.zfsoft.zftal.mapper.CityMapper">
+<mapper namespace="com.zfsoft.mapper.CityMapper">
 
-    <resultMap id="BaseResultMap" type="com.zfsoft.zftal.model.City" >
+    <resultMap id="BaseResultMap" type="com.zfsoft.model.City" >
         <result column="id" property="id" />
         <result column="name" property="name" />
         <result column="state" property="state" />
